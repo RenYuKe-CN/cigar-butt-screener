@@ -1,0 +1,14 @@
+[Unit]
+Description=Cigar Butt Screener Web
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/cigar-butt-screener
+ExecStart=python3 -m http.server 8080
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

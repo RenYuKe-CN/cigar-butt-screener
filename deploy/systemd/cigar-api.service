@@ -1,0 +1,14 @@
+[Unit]
+Description=Cigar Butt Screener API
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/cigar-butt-screener
+ExecStart=/root/cigar-butt-screener/venv/bin/python api_server.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
